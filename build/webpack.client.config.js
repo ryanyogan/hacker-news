@@ -14,7 +14,7 @@ const config = Object.assign({}, base, {
   plugins: (base.plugins || []).concat([
     // strip comments in vue code
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(proces.env.NODE_ENV || 'development'),
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.VUE_ENV': '"client"',
     }),
     // extract vendor chunks for better caching
@@ -40,6 +40,10 @@ if (process.env.NODE_ENV === 'production') {
     new ExtractTextPlugin('styles.[hash].css'),
 
     new webpack.LoaderOptionsPlugin({
+      minimize: true,
+    }),
+
+    new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
       },
@@ -50,8 +54,8 @@ if (process.env.NODE_ENV === 'production') {
       filename: 'service-worker.js',
       dontCacheBustUrlsMatching: /./,
       staticFileGlobsIgnorePatterns: [/index\.html$/, /\.map$/],
-    }),
-  );
+    })
+  )
 }
 
 module.exports = config;

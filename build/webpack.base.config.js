@@ -8,7 +8,7 @@ module.exports = {
     vendor: [
       'es6-promise',
       'firebase/app',
-      'firebase/database';
+      'firebase/database',
       'vue',
       'vue-router',
       'vuex',
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: buble-loader,
+        loader: 'buble-loader',
         exclude: /node_modules/,
         options: {
           objectAssign: 'Object.assign',
