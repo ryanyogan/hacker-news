@@ -3,7 +3,7 @@
     <div class="header">
       <div class="inner">
         <router-link to="/" exact>
-          <img class="logo" src="~public/logo-49.png" alt="logo" />
+          <img class="logo" src="~public/logo-48.png" alt="logo" />
         </router-link>
         <router-link to="/top">Top</router-link>
         <a class="github" href="https://github.com/ryanyogan/hacker-news" target="_blank">
