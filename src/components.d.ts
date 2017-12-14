@@ -13,6 +13,38 @@ import {
 } from '@stencil/router';
 
 import {
+  NewsPage as ListContainer
+} from './components/list-container/list-container';
+
+declare global {
+  interface HTMLListContainerElement extends ListContainer, HTMLElement {
+  }
+  var HTMLListContainerElement: {
+    prototype: HTMLListContainerElement;
+    new (): HTMLListContainerElement;
+  };
+  interface HTMLElementTagNameMap {
+    "list-container": HTMLListContainerElement;
+  }
+  interface ElementTagNameMap {
+    "list-container": HTMLListContainerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "list-container": JSXElements.ListContainerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ListContainerAttributes extends HTMLAttributes {
+      
+        pageNum?: number,
+        type?: string
+    }
+  }
+}
+
+
+import {
   MyOwnHn as MyOwnHn
 } from './components/my-own-hn/my-own-hn';
 
