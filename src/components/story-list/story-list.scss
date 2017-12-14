@@ -1,0 +1,55 @@
+story-list {
+  ion-list .item-inner {
+    padding-bottom: 10px;
+    padding-top: 7px;
+    border-bottom-color: #e4e7ec !important;
+  }
+
+  .points {
+    color: #488aff;
+    font-weight: bold;
+    width: 55px;
+    padding-left: 10px;
+  }
+
+  .comments-text {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    color: #717883;
+    text-align: start;
+  }
+
+  .list-header a {
+    color: #202939;
+    text-decoration: none;
+  }
+
+  .list-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .comments-title {
+    line-height: 2.1;
+  }
+
+  ion-label {
+    white-space: normal !important;
+  }
+
+  ion-skeleton-text {
+    display: inline-block;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  ion-skeleton-text span {
+    display: inline-block;
+    font-size: 0.8rem;
+    background-color: #ececec;
+  }
+}

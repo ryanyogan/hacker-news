@@ -38,3 +38,34 @@ declare global {
   }
 }
 
+
+import {
+  StoryList as StoryList
+} from './components/story-list/story-list';
+
+declare global {
+  interface HTMLStoryListElement extends StoryList, HTMLElement {
+  }
+  var HTMLStoryListElement: {
+    prototype: HTMLStoryListElement;
+    new (): HTMLStoryListElement;
+  };
+  interface HTMLElementTagNameMap {
+    "story-list": HTMLStoryListElement;
+  }
+  interface ElementTagNameMap {
+    "story-list": HTMLStoryListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "story-list": JSXElements.StoryListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StoryListAttributes extends HTMLAttributes {
+      
+        stories?: any
+    }
+  }
+}
+
