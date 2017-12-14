@@ -21,8 +21,9 @@
     "@stencil/utils": "^0.0.4"
   },
   "dependencies": {
-    "@ionic/core": "^0.0.1",
-    "@stencil/core": "^0.0.8",
-    "@stencil/router": "^0.0.17"
+    "@ionic/core": "0.0.2-20",
+    "@stencil/core": "0.0.8-5",
+    "@stencil/router": "0.0.17-1",
+    "eslint": "^4.13.1"
   }
 }
