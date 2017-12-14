@@ -9,31 +9,29 @@ export class MyOwnHn {
     return (
       <ion-app>
         <ion-header>
-          <ion-toolbar>
-            <ion-toolbar color="primary">
-              <ion-button slot="start">
-                <ion-icon id="ionic-icon" name="ionic" />
-              </ion-button>
+          <ion-toolbar color="primary">
+            <ion-buttons slot="start">
+              <ion-icon id="ionic-icon" name="ionic" />
+            </ion-buttons>
 
-              <div class="tabs-bar">
-                <stencil-route-link
-                  url="/news/1"
-                  urlMatch={["/", "/news/:pageNum", "/news/:pageNum/"]}
-                  activeClass="active"
-                  exact={true}
+            <div class="tabs-bar">
+              <stencil-route-link
+                url="/news/1"
+                urlMatch={["/", "/news/:pageNum", "/news/:pageNum/"]}
+                activeClass="active"
+                exact={true}
+              >
+                <ion-button
+                  class={{
+                    "header-button": true,
+                    "first-button": true
+                  }}
+                  clear
                 >
-                  <ion-button
-                    class={{
-                      "header-button": true,
-                      "first-button": true
-                    }}
-                    clear
-                  >
-                    News
-                  </ion-button>
-                </stencil-route-link>
-              </div>
-            </ion-toolbar>
+                  News
+                </ion-button>
+              </stencil-route-link>
+            </div>
           </ion-toolbar>
         </ion-header>
 

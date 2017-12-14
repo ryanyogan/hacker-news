@@ -8,6 +8,9 @@ import '@stencil/router';
 
 import '@ionic/core';
 
+import {
+  RouterHistory,
+} from '@stencil/router';
 
 import {
   MyOwnHn as MyOwnHn
@@ -34,6 +37,38 @@ declare global {
   namespace JSXElements {
     export interface MyOwnHnAttributes extends HTMLAttributes {
       
+    }
+  }
+}
+
+
+import {
+  NewsPage as NewsPage
+} from './components/news-page/news-page';
+
+declare global {
+  interface HTMLNewsPageElement extends NewsPage, HTMLElement {
+  }
+  var HTMLNewsPageElement: {
+    prototype: HTMLNewsPageElement;
+    new (): HTMLNewsPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    "news-page": HTMLNewsPageElement;
+  }
+  interface ElementTagNameMap {
+    "news-page": HTMLNewsPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "news-page": JSXElements.NewsPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NewsPageAttributes extends HTMLAttributes {
+      
+        match?: any,
+        history?: RouterHistory
     }
   }
 }
